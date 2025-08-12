@@ -1,0 +1,145 @@
+/*
+Theme Name: NRDS Business Theme
+Theme URI: https://n0kmo.com
+Description: Based custom coding for NRDS Business Theme.
+Version: 1.0
+Author: Jeremiah Bagula
+Author URI: http://nrds.life/
+Tags: white, two-columns, fullwidth-template, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, theme-options, threaded-comments, translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background: #333; */
+    /* color: #fff; */
+    color: #000;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    /* margin: 20px 0; */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.commentlist {
+    list-style: none;
+    padding: 0;
+}
+
+.commentlist li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.commentlist li .comment-author {
+    font-weight: bold;
+}
+
+.commentlist li .comment-meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.commentlist li .comment-content {
+    margin-top: 5px;
+}
+
+/* Basic Navigation Bar Styling */
+#main-navigation {
+    background-color: #fff; /* Dark background for the nav bar */
+    padding: 10px 0;
+}
+
+.main-menu {
+    list-style: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange menu items horizontally */
+    justify-content: center; /* Center the menu items */
+}
+
+.main-menu li {
+    margin: 0 15px; /* Spacing between menu items */
+}
+
+.main-menu li a {
+    color: #000; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.main-menu li a:focus,
+.main-menu li a:active {
+    outline: none; /* Remove default focus outline */
+    background-color: rgba(255, 0, 0, 0.2); /* Light red background on focus/active */
+}
+
+.main-menu li a:hover {
+    background-color: rgba(255, 0, 0, 0.75); /* Slightly lighter background on hover */
+    border-color: #f00;
+    /* border-radius: 5px; */
+}
+
+/* Styling for Sub-Menus (if applicable) */
+.main-menu ul.sub-menu {
+    display: none; /* Hide sub-menus by default */
+    position: absolute;
+    background-color: #fff;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.main-menu li:hover > ul.sub-menu {
+    display: block; /* Show sub-menu on hover */
+}
+
+.main-menu ul.sub-menu li {
+    margin: 0;
+}
+
+.main-menu ul.sub-menu li a {
+    padding: 8px 15px;
+}
