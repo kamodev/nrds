@@ -3,7 +3,6 @@ function nrds_theme_setup() {
     // Add support for various WordPress features
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_theme_support('custom-logo');
     add_theme_support('custom-background');
     add_theme_support('custom-header');
     add_theme_support('automatic-feed-links');
@@ -48,20 +47,50 @@ function nrds_theme_sidebars() {
         'after_title'   => '</h2>',
     ));
 
-    // Register a footer widget area
+    // Register a footer widget area 1
     // This is useful for themes that want to display widgets in the footer area.
     // It can be used for displaying additional information, links, or advertisements.
     // The footer widget area can be styled separately from the main content.
     // It is a common practice to have multiple footer widget areas.
     register_sidebar(array(
-        'name'          => __('Footer Widget Area', 'nrds-theme'),
-        'id'            => 'footer-widget-area',
+        'name'          => __('Footer Widget Area 1', 'nrds-theme'),
+        'id'            => 'footer-widget-1',
         'description'   => __('Widgets in this area will be shown in the footer.', 'nrds-theme'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ));
+
+    // Register a footer widget area 1
+    // This is useful for themes that want to display widgets in the footer area.
+    // It can be used for displaying additional information, links, or advertisements.
+    // The footer widget area can be styled separately from the main content.
+    // It is a common practice to have multiple footer widget areas.
+    register_sidebar(array(
+        'name'          => __('Footer Widget Area 2', 'nrds-theme'),
+        'id'            => 'footer-widget-2',
+        'description'   => __('Widgets in this area will be shown in the footer.', 'nrds-theme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    
+    // Register a footer widget area 3
+    // This is useful for themes that want to display widgets in the footer area.
+    // It can be used for displaying additional information, links, or advertisements.
+    // The footer widget area can be styled separately from the main content.
+    // It is a common practice to have multiple footer widget areas.
+    register_sidebar(array(
+        'name'          => __('Footer Widget Area 3', 'nrds-theme'),
+        'id'            => 'footer-widget-3',
+        'description'   => __('Widgets in this area will be shown in the footer.', 'nrds-theme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    )); 
 
     // Register a header widget area
     // This is useful for themes that want to display widgets in the header area.
@@ -92,4 +121,17 @@ function nrds_theme_sidebars() {
 
 // Register the sidebars
 add_action('widgets_init', 'nrds_theme_sidebars');
+
+function nrds_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array('site-title', 'site-description'),
+    );
+    add_theme_support('custom-logo', $defaults);
+}
+add_action('after_setup_theme', 'nrds_custom_logo_setup');
+
 ?>

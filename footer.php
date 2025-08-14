@@ -1,5 +1,30 @@
-<footer>
-    <p>&copy; <?php echo date('Y'); ?> My WordPress Theme. All rights reserved.</p>
+<?php
+  if ( is_active_sidebar( 'right-sidebar' ) ) {
+    dynamic_sidebar( 'right-sidebar' );
+  }
+?>
+</div>
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <?php if ( is_active_sidebar( 'footer-widget-1' ) || is_active_sidebar( 'footer-widget-2' ) || is_active_sidebar( 'footer-widget-3' )) : ?>
+  <section class="footer-widgets-area">
+    <?php if ( is_active_sidebar( 'footer-widget-1' ) ) : ?>
+      <div class="footer-widget-column">
+        <?php dynamic_sidebar( 'footer-widget-1' ); ?>
+      </div>
+    <?php endif; ?>
+    <?php if ( is_active_sidebar( 'footer-widget-2' ) ) : ?>
+      <div class="footer-widget-column">
+        <?php dynamic_sidebar( 'footer-widget-2' ); ?>
+      </div>
+    <?php endif; ?>
+    <?php if ( is_active_sidebar( 'footer-widget-3' ) ) : ?>
+      <div class="footer-widget-column">
+        <?php dynamic_sidebar( 'footer-widget-3' ); ?>
+      </div>
+    <?php endif; ?>
+    </section>
+  <?php endif; ?>
+  <p>&copy; <?php echo date('Y'); ?> National Readiness &amp; Defense. All rights reserved.</p>
 </footer>
 
 <?php wp_footer(); ?>

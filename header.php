@@ -11,15 +11,28 @@
     <title><?php wp_title(); ?></title>
     
     <?php wp_head(); ?>
-
-    <!-- Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body <?php body_class(); ?>>
     <!-- Menu location -->
-    <?php require_once('inc/primary-menu.php'); ?>
     <header>
-        <h1><?php bloginfo('name'); ?></h1>
+        <div class="site-branding">
+            <?php 
+                if ( has_custom_logo() ):
+                    the_custom_logo();
+                else: 
+                    ?>
+                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+                <?php endif; ?>            
+            </div>
+            <div>
+                <?php require_once('inc/primary-menu.php'); ?>
+            </div>
+
     </header>
-    
+    <div id="site-content">
+    <?php
+    if ( is_active_sidebar( 'left-sidebar' ) ) {
+        dynamic_sidebar( 'left-sidebar' );
+    }
+    ?>
     

@@ -13,5 +13,4 @@
         <p>No content found</p>
     <?php endif; ?>
 </main>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
