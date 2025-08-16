@@ -134,4 +134,53 @@ function nrds_custom_logo_setup() {
 }
 add_action('after_setup_theme', 'nrds_custom_logo_setup');
 
+
+function nrds_theme_settings_page_menu() {
+    // Add a new menu item under "Appearance" for theme settings page
+
+    add_theme_page(
+        __('Theme Settings', 'nrds-theme'),
+        __('Theme Settings', 'nrds-theme'),
+        'manage_options',
+        'nrds-theme-settings',
+        'nrds_theme_settings_page_html',
+    );
+}
+add_action('admin_menu', 'nrds_theme_settings_page_menu');
+
+function nrds_theme_settings_page_html() {
+    // Check user capabilities
+    if (!current_user_can('manage_options')) {
+        return;
+    }  
+    // Page content
+    echo '<div class="wrap">';
+    echo '<h1>' . esc_html(get_admin_page_title()) . '</h1>';
+    echo '<p>Manage your theme\'s general settings here.</p>';
+    echo '<form method="post" action="options.php">';
+    settings_fields('nrds_theme_settings');
+    do_settings_sections('nrds-theme-settings');
+    submit_button();
+    echo '</form>';
+    // You can add more sections and fields as needed
+    // For example, you can add a section for custom colors, fonts, etc.
+    // You can also add a section for custom CSS
+    // You can also add a section for custom JavaScript
+    // You can also add a section for custom header and background images
+    // You can also add a section for custom logo
+    // You can also add a section for custom menus
+    // You can also add a section for custom widgets
+    // You can also add a section for custom post types and taxonomies
+    // You can also add a section for custom shortcodes
+    // You can also add a section for custom page templates
+    // You can also add a section for custom theme options
+    // You can also add a section for custom theme settings
+    // You can also add a section for custom theme documentation
+    // You can also add a section for custom theme support
+    // You can also add a section for custom theme updates    
+    // Settings form can be added here
+    // For simplicity, we will just display a message       
+    echo '</div>';
+}
+
 ?>
