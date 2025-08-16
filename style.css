@@ -10,6 +10,18 @@ License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/* All the basic variables for the colors to start the theme */
+:root {
+    --primary-color: #ff0000; /* Red */
+    --secondary-color: #00ff00; /* Green */
+    --background-color: #fff; /* White */
+    --text-color: #000; /* Black */
+    --menu-underline-color: #f00;
+    --menu-hover-bg-color: rgba(255, 0, 0, 0.75);
+    --menu-hover-border-color: #f00;
+    --menu-focus-bg-color: rgba(255, 0, 0, 0.2);
+}
+
 html,
 body {
     font-family: Arial, sans-serif;
@@ -20,11 +32,9 @@ body {
 }
 
 header {
-    /* background: #333; */
-    /* color: #fff; */
     display: flex;
-    color: #000;
-    background-color: #fff;
+    color: var(--text-color);
+    background-color: inherit;
     padding: 20px 0;
     text-align: center;
     max-height: 20%;
@@ -221,14 +231,3 @@ footer {
     margin: 0 10px;
 }
 
-/* All the basic variables for the colors to start the theme */
-:root {
-    --primary-color: #ff0000; /* Red */
-    --secondary-color: #00ff00; /* Green */
-    --background-color: #fff; /* White */
-    --text-color: #000; /* Black */
-    --menu-underline-color: #f00;
-    --menu-hover-bg-color: rgba(255, 0, 0, 0.75);
-    --menu-hover-border-color: #f00;
-    --menu-focus-bg-color: rgba(255, 0, 0, 0.2);
-}
