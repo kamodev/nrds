@@ -16,13 +16,11 @@
     <!-- Menu location -->
     <header>
         <div class="site-branding">
-            <?php 
-                if ( has_custom_logo() ):
-                    the_custom_logo();
-                else: 
-                    ?>
+            <?php if ( has_custom_logo() ): ?>
+                <?php the_custom_logo(); ?>
+            <?php else: ?>
                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-                <?php endif; ?>            
+            <?php endif; ?>            
             </div>
             <div>
                 <?php require_once('inc/primary-menu.php'); ?>
@@ -30,9 +28,9 @@
 
     </header>
     <div id="site-content">
-    <?php
-    if ( is_active_sidebar( 'left-sidebar' ) ) {
-        dynamic_sidebar( 'left-sidebar' );
-    }
-    ?>
+        <?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
+            <aside id="left-sidebar" class="sidebar">
+                <?php dynamic_sidebar( 'left-sidebar' ); ?>
+            </aside>
+        <?php endif; ?>
     

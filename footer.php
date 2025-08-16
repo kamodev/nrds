@@ -1,8 +1,8 @@
-<?php
-  if ( is_active_sidebar( 'right-sidebar' ) ) {
-    dynamic_sidebar( 'right-sidebar' );
-  }
-?>
+  <?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
+    <aside id="right-sidebar" class="sidebar">
+      <?php dynamic_sidebar( 'right-sidebar' ); ?>
+    </aside>
+  <?php endif; ?>
 </div>
 <footer id="colophon" class="site-footer" role="contentinfo">
   <?php if ( is_active_sidebar( 'footer-widget-1' ) || is_active_sidebar( 'footer-widget-2' ) || is_active_sidebar( 'footer-widget-3' )) : ?>
@@ -26,7 +26,6 @@
   <?php endif; ?>
   <p>&copy; <?php echo date('Y'); ?> National Readiness &amp; Defense. All rights reserved.</p>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>
