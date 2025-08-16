@@ -10,12 +10,13 @@ License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+html,
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: var(--background-color);
 }
 
 header {
@@ -36,6 +37,15 @@ h1 {
     margin: 0;
 }
 
+/* Navigation styling */
+nav.social-navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
 nav {
     /* margin: 20px 0; */
 }
@@ -50,6 +60,7 @@ nav a:hover {
     background: #555;
 }
 
+/* Site footer styles */
 footer {
     background: #333;
     color: #fff;
@@ -66,6 +77,7 @@ footer {
     overflow: hidden;
 }
 
+/* Comments stylinng */
 .commentlist {
     list-style: none;
     padding: 0;
@@ -124,7 +136,6 @@ footer {
 .main-menu li a:hover {
     background-color: rgba(255, 0, 0, 0.75); /* Slightly lighter background on hover */
     border-color: #f00;
-    /* border-radius: 5px; */
 }
 
 /* Styling for Sub-Menus (if applicable) */
@@ -154,9 +165,7 @@ footer {
 #site-content {
     display: flex;
     flex-basis: 100%;
-    /* padding: 20px; */
     background-color: #f9f9f9; /* Light background for content area */
-
 }
 
 #site-content #sidebar {
@@ -168,7 +177,7 @@ footer {
 #site-content #main {
     display: inherit;
     flex-basis: 100%;
-    background-color: #fff; /* White background for main content */
+    background-color: inherit;
 }
 
 .site-branding {
@@ -202,14 +211,24 @@ footer {
 }
 
 .footer-widgets-area {
-    /* background-color: #f1f1f1; Light gray background for footer widget area */
     display: flex;
     padding: 20px;
-    /* text-align: center; */
     margin-bottom: 20px;
 }
 
 .footer-widget-column {
     flex-basis: 33.33%;
     margin: 0 10px;
+}
+
+/* All the basic variables for the colors to start the theme */
+:root {
+    --primary-color: #ff0000; /* Red */
+    --secondary-color: #00ff00; /* Green */
+    --background-color: #fff; /* White */
+    --text-color: #000; /* Black */
+    --menu-underline-color: #f00;
+    --menu-hover-bg-color: rgba(255, 0, 0, 0.75);
+    --menu-hover-border-color: #f00;
+    --menu-focus-bg-color: rgba(255, 0, 0, 0.2);
 }
