@@ -22,16 +22,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --menu-focus-bg-color: rgba(255, 0, 0, 0.2);
 }
 
-html,body {
+body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
-    flex-direction: column;
     line-height: 1.6;
     margin: 0;
     min-height: 100vh;
     padding: 0;
 }
+
+@import "assets/css/header.css";
 
 /* header {
     background-color: inherit; 
@@ -57,7 +58,6 @@ html,body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
     left: 0;
     position: fixed;
-    /* background-color: #ffffff; Or your desired header background */
     transition: all 0.3s ease-in-out; /* Optional: Smooth transition for changes */
     top: 0;
     width: 100%;
@@ -77,9 +77,9 @@ nav.social-navigation {
     justify-content: flex-end;
 }
 
-nav {
-    /* margin: 20px 0; */
-}
+/*nav {
+    margin: 20px 0;
+}*/
 
 nav a {
     color: #fff;
@@ -89,12 +89,6 @@ nav a {
 
 nav a:hover {
     background: #555;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
 }
 
 /* Comments stylinng */
@@ -184,21 +178,31 @@ nav a:hover {
 /* Layout for Main Content and Sidebar */
 #site-content {
     display: flex;
+    flex-direction: column;
     flex-basis: 100%;
-    background-color: #f9f9f9; /* Light background for content area */
+    flex-grow: 1;
+    padding: 20px;
+    background-color: inherit; /* Inherit background color from body */
+    margin: 0 auto;
 }
 
-#site-content #right-sidebar,
-#site-content #left-sidebar {
+/* Sidebars */
+#left-sidebar.sidebar,
+#right-sidebar.sidebar {
     width: 25%;
     background-color: #f1f1f1; /* Light gray background for sidebar */
 }
 
-#site-content #main {
-    /* display: inherit; */
-    flex-basis: 100%;
+#site-content {
     background-color: inherit;
+    flex-basis: 100%;
     flex-grow: 1;
+}
+
+#main {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff; /* White background for main content */
 }
 
 .site-branding {
@@ -236,10 +240,10 @@ nav a:hover {
 /* Site footer styles */
 footer {
     background: #333;
-    bottom: 0;
+    /* bottom: 0; */
     color: #fff;
     padding: 10px 0;
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     width: 100%;
 }

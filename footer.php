@@ -28,6 +28,7 @@
     <p>&copy; <?php echo date('Y'); ?> National Readiness &amp; Defense. All rights reserved.</p>
   </section>
 </footer>
+</div> <!-- .site-container -->
 <?php wp_footer(); ?>
 </body>
 </html>

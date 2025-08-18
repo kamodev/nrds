@@ -1,0 +1,19 @@
+/* header {
+    background-color: inherit; 
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    max-height: 20%;
+    padding: 20px 0;
+    text-align: center;
+} */
+
+#site-header {
+    background-color: inherit;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;;
+    margin-bottom: 1rem;
+    padding: 20px 0;        
+    width: 100%;
+}

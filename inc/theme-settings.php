@@ -74,8 +74,6 @@ function nrds_theme_setting_example_callback() {
     ?>
     <input type="text" name="nrds_theme_settings_options[nrds_theme_setting_example]" value="<?php echo isset($options['nrds_theme_setting_example']) ? esc_attr($options['nrds_theme_setting_example']) : ''; ?>" />
     <p class="description"><?php _e('This is an example setting field.', 'nrds-theme'); ?></p>
-    <input type="text" name="nrds_theme_settings_options[nrds_theme_setting_color]" value="<?php echo isset($options['nrds_theme_setting_color']) ? esc_attr($options['nrds_theme_setting_example']) : ''; ?>" />
-    <p class="description"><?php _e('Primary color field.', 'nrds-theme'); ?></p>
     <?php
 }
 

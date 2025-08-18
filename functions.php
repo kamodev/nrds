@@ -4,7 +4,7 @@
 require_once('inc/theme-settings.php');
 
 function nrds_theme_setup() {
-    
+
     // Add support for various WordPress features
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -21,8 +21,6 @@ function nrds_theme_setup() {
     ));
 }
 
-add_action('after_setup_theme', 'nrds_theme_setup');
-
 function nrds_theme_scripts() {
     // Enqueue styles
     wp_enqueue_style('nrds-theme-style', get_stylesheet_uri());
@@ -30,12 +28,6 @@ function nrds_theme_scripts() {
     // Enqueue scripts
     wp_enqueue_script('nrds-theme-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), null, true);
 }
-
-add_action('wp_enqueue_scripts', 'nrds_theme_scripts');
-
-// Setup the short codes
-add_filter('widget_text', 'do_shortcode');
-add_filter('the_excerpt', 'do_shortcode');
 
 function nrds_theme_sidebars() {
     // Register a sidebar
@@ -124,10 +116,8 @@ function nrds_theme_sidebars() {
     ));
 }
 
-// Register the sidebars
-add_action('widgets_init', 'nrds_theme_sidebars');
-
 function nrds_custom_logo_setup() {
+    // Add support for custom logo in the theme
     $defaults = array(
         'height'      => 100,
         'width'       => 400,
@@ -137,8 +127,16 @@ function nrds_custom_logo_setup() {
     );
     add_theme_support('custom-logo', $defaults);
 }
+
+// Add action section to the theme
 add_action('after_setup_theme', 'nrds_custom_logo_setup');
+add_action('after_setup_theme', 'nrds_theme_setup');
+add_action('widgets_init', 'nrds_theme_sidebars');
+add_action('wp_enqueue_scripts', 'nrds_theme_scripts');
 
+// Add filter(s) to the theme
+add_filter('widget_text', 'do_shortcode');
+add_filter('the_excerpt', 'do_shortcode');
 
-
+// End of functions.php file
 ?>
