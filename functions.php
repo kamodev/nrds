@@ -4,6 +4,7 @@
 require_once('inc/theme-settings.php');
 
 function nrds_theme_setup() {
+    
     // Add support for various WordPress features
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');

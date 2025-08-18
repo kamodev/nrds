@@ -24,7 +24,9 @@
     <?php endif; ?>
     </section>
   <?php endif; ?>
-  <p>&copy; <?php echo date('Y'); ?> National Readiness &amp; Defense. All rights reserved.</p>
+  <section class="site-copyright">
+    <p>&copy; <?php echo date('Y'); ?> National Readiness &amp; Defense. All rights reserved.</p>
+  </section>
 </footer>
 <?php wp_footer(); ?>
 </body>

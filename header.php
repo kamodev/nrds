@@ -14,7 +14,7 @@
 </head>
 <body <?php body_class(); ?>>
     <!-- Menu location -->
-    <header>
+    <header id="site-header" role="banner">
         <div class="site-branding">
             <?php if ( has_custom_logo() ): ?>
                 <?php the_custom_logo(); ?>

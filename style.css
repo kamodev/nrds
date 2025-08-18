@@ -22,26 +22,47 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --menu-focus-bg-color: rgba(255, 0, 0, 0.2);
 }
 
-html,
-body {
+html,body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
+    flex-direction: column;
     line-height: 1.6;
     margin: 0;
+    min-height: 100vh;
     padding: 0;
-    background-color: var(--background-color);
 }
 
-header {
-    display: flex;
+/* header {
+    background-color: inherit; 
     color: var(--text-color);
-    background-color: inherit;
+    display: flex;
+    justify-content: space-between;
+    max-height: 20%;
     padding: 20px 0;
     text-align: center;
-    max-height: 20%;
-    justify-content: space-between;
+} */
+
+#site-header {
+    background-color: inherit;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;;
+    margin-bottom: 1rem;
+    padding: 20px 0;        
+    width: 100%;
 }
 
-
+.sticky-header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    left: 0;
+    position: fixed;
+    /* background-color: #ffffff; Or your desired header background */
+    transition: all 0.3s ease-in-out; /* Optional: Smooth transition for changes */
+    top: 0;
+    width: 100%;
+    z-index: 999; /* Ensures it stays on top of other content */
+}
 
 h1 {
     margin: 0;
@@ -68,17 +89,6 @@ nav a {
 
 nav a:hover {
     background: #555;
-}
-
-/* Site footer styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 .container {
@@ -178,16 +188,17 @@ footer {
     background-color: #f9f9f9; /* Light background for content area */
 }
 
-#site-content #sidebar {
+#site-content #right-sidebar,
+#site-content #left-sidebar {
     width: 25%;
-    float: right;
     background-color: #f1f1f1; /* Light gray background for sidebar */
 }
 
 #site-content #main {
-    display: inherit;
+    /* display: inherit; */
     flex-basis: 100%;
     background-color: inherit;
+    flex-grow: 1;
 }
 
 .site-branding {
@@ -199,10 +210,12 @@ footer {
     font-size: 2.5em;
     margin: 0;
 }
+
 .site-branding .site-title a {
     color: #000;
     text-decoration: none;
 }
+
 .site-branding .site-title a:hover {
     text-decoration: underline;
 }
@@ -220,14 +233,32 @@ footer {
     margin-top: 20px;
 }
 
-.footer-widgets-area {
-    display: flex;
-    padding: 20px;
-    margin-bottom: 20px;
+/* Site footer styles */
+footer {
+    background: #333;
+    bottom: 0;
+    color: #fff;
+    padding: 10px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
-.footer-widget-column {
+/* Footer Widgets Area */
+footer .footer-widgets-area {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+footer .footer-widget-column {
     flex-basis: 33.33%;
     margin: 0 10px;
 }
 
+/* Site Copyright */
+footer .site-copyright {
+    flex-basis: 100%;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
