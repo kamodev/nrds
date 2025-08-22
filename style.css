@@ -45,7 +45,7 @@ body {
 } */
 
 #site-header {
-    background-color: inherit;
+    background-color: var(--background-color);
     display: flex;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     justify-content: space-between;;
@@ -59,9 +59,13 @@ body {
     left: 0;
     position: fixed;
     transition: all 0.3s ease-in-out; /* Optional: Smooth transition for changes */
-    top: 0;
+    top: 32px;
     width: 100%;
     z-index: 999; /* Ensures it stays on top of other content */
+}
+
+body:not(.admin-bar) #site-header {
+    top: 0;
 }
 
 h1 {
@@ -178,30 +182,25 @@ nav a:hover {
 /* Layout for Main Content and Sidebar */
 #site-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-basis: 100%;
     flex-grow: 1;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: inherit; /* Inherit background color from body */
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 /* Sidebars */
 #left-sidebar.sidebar,
 #right-sidebar.sidebar {
-    width: 25%;
+    display: flex;
+    width: 30%;
     background-color: #f1f1f1; /* Light gray background for sidebar */
 }
 
-#site-content {
-    background-color: inherit;
-    flex-basis: 100%;
-    flex-grow: 1;
-}
-
 #main {
-    flex-grow: 1;
-    padding: 20px;
+    /* flex-grow: 1; */
+    padding: 0.5rem;
     background-color: #fff; /* White background for main content */
 }
 
