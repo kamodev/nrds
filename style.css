@@ -45,9 +45,10 @@ body {
 } */
 
 #site-header {
+    align-items: center; /* Center align items vertically */;
     background-color: var(--background-color);
     display: flex;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     justify-content: space-between;;
     margin-bottom: 1rem;
     padding: 20px 0;        
@@ -264,4 +265,13 @@ footer .site-copyright {
     flex-basis: 100%;
     font-size: 0.9em;
     margin-top: 10px;
+}
+
+.current_page_item a,
+.current-menu-item a {
+    color: var(--primary-color); /* Use primary color for current menu item */
+    font-weight: bold; /* Make current menu item bold */
+    font-style: italic; /* Make current menu item italic */
+    text-decoration: underline; /* Underline current menu item */
+    border-bottom: 2px solid #f00; /* Underline current menu item */
 }
