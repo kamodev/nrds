@@ -275,3 +275,10 @@ footer .site-copyright {
     text-decoration: underline; /* Underline current menu item */
     border-bottom: 2px solid #f00; /* Underline current menu item */
 }
+
+/* All the post related styling */
+.post > header {
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
