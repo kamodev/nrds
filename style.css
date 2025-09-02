@@ -279,6 +279,6 @@ footer .site-copyright {
 /* All the post related styling */
 .post > header {
     border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    /* margin-bottom: 20px; */
+    /* padding-bottom: 10px; */
 }
