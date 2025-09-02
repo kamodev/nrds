@@ -12,10 +12,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* All the basic variables for the colors to start the theme */
 :root {
-    --primary-color: #ff0000; /* Red */
-    --secondary-color: #00ff00; /* Green */
-    --background-color: #fff; /* White */
-    --text-color: #000; /* Black */
+    --primary-color: #ff0000; 
+    --secondary-color: #00ff00;     
+    --background-color: #fff;
+    --text-color: #000;
     --menu-underline-color: #f00;
     --menu-hover-bg-color: rgba(255, 0, 0, 0.75);
     --menu-hover-border-color: #f00;
@@ -33,6 +33,15 @@ body {
 }
 
 @import "assets/css/header.css";
+
+/* 
+@import "assets/css/footer.css";
+@import "assets/css/sidebar.css";
+@import "assets/css/navigation.css";
+@import "assets/css/content.css";
+@import "assets/css/comments.css";
+@import "assets/css/widgets.css"; 
+*/
 
 /* header {
     background-color: inherit; 
@@ -122,44 +131,44 @@ nav a:hover {
 
 /* Basic Navigation Bar Styling */
 #main-navigation {
-    background-color: #fff; /* Dark background for the nav bar */
+    background-color: #fff;
     padding: 10px 0;
 }
 
 .main-menu {
-    list-style: none; /* Remove default bullet points */
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Arrange menu items horizontally */
-    justify-content: center; /* Center the menu items */
+    display: flex;
+    justify-content: center; 
 }
 
 .main-menu li {
-    margin: 0 15px; /* Spacing between menu items */
+    margin: 0 15px; 
 }
 
 .main-menu li a {
-    color: #000; /* White text color for links */
-    text-decoration: none; /* Remove underline from links */
+    color: #000; 
+    text-decoration: none;
     padding: 8px 12px;
     display: block;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    transition: background-color 0.3s ease;
 }
 
 .main-menu li a:focus,
 .main-menu li a:active {
-    outline: none; /* Remove default focus outline */
-    background-color: rgba(255, 0, 0, 0.2); /* Light red background on focus/active */
+    outline: none;
+    background-color: rgba(255, 0, 0, 0.2); 
 }
 
 .main-menu li a:hover {
-    background-color: rgba(255, 0, 0, 0.75); /* Slightly lighter background on hover */
+    background-color: rgba(255, 0, 0, 0.75);
     border-color: #f00;
 }
 
 /* Styling for Sub-Menus (if applicable) */
 .main-menu ul.sub-menu {
-    display: none; /* Hide sub-menus by default */
+    display: none;
     position: absolute;
     background-color: #fff;
     padding: 10px 0;
@@ -169,7 +178,7 @@ nav a:hover {
 }
 
 .main-menu li:hover > ul.sub-menu {
-    display: block; /* Show sub-menu on hover */
+    display: block;
 }
 
 .main-menu ul.sub-menu li {
@@ -186,9 +195,7 @@ nav a:hover {
     flex-direction: row;
     flex-basis: 100%;
     flex-grow: 1;
-    /* padding: 20px; */
-    background-color: inherit; /* Inherit background color from body */
-    /* margin: 0 auto; */
+    background-color: inherit; 
 }
 
 /* Sidebars */
@@ -196,13 +203,13 @@ nav a:hover {
 #right-sidebar.sidebar {
     display: flex;
     width: 30%;
-    background-color: #f1f1f1; /* Light gray background for sidebar */
+    background-color: #f1f1f1; 
 }
 
 #main {
     /* flex-grow: 1; */
     padding: 0.5rem;
-    background-color: #fff; /* White background for main content */
+    background-color: #fff; 
 }
 
 .site-branding {
@@ -240,10 +247,8 @@ nav a:hover {
 /* Site footer styles */
 footer {
     background: #333;
-    /* bottom: 0; */
     color: #fff;
     padding: 10px 0;
-    /* position: absolute; */
     text-align: center;
     width: 100%;
 }
@@ -269,11 +274,11 @@ footer .site-copyright {
 
 .current_page_item a,
 .current-menu-item a {
-    color: var(--primary-color); /* Use primary color for current menu item */
-    font-weight: bold; /* Make current menu item bold */
-    font-style: italic; /* Make current menu item italic */
-    text-decoration: underline; /* Underline current menu item */
-    border-bottom: 2px solid #f00; /* Underline current menu item */
+    color: var(--primary-color);
+    font-weight: bold; 
+    font-style: italic; 
+    text-decoration: underline; 
+    border-bottom: 2px solid #f00; 
 }
 
 /* All the post related styling */
