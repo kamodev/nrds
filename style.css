@@ -54,7 +54,7 @@ body {
 } */
 
 #site-header {
-    align-items: center; /* Center align items vertically */;
+    align-items: center;
     background-color: var(--background-color);
     display: flex;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -65,13 +65,13 @@ body {
 }
 
 .sticky-header {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     left: 0;
     position: fixed;
-    transition: all 0.3s ease-in-out; /* Optional: Smooth transition for changes */
+    transition: all 0.3s ease-in-out;
     top: 32px;
     width: 100%;
-    z-index: 999; /* Ensures it stays on top of other content */
+    z-index: 999; 
 }
 
 body:not(.admin-bar) #site-header {
