@@ -54,7 +54,7 @@ body {
 } */
 
 #site-header {
-    align-items: center;
+    align-items: start;
     background-color: var(--background-color);
     display: flex;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -140,6 +140,7 @@ nav a:hover {
     margin: 0;
     padding: 0;
     display: flex;
+    font-size: 1.25rem;
     justify-content: center; 
 }
 

@@ -14,8 +14,6 @@
   </article>
   <?php endwhile; endif; ?>
   <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-
-  <?php comments_template(); ?>
 </main>
 
 <?php get_footer(); ?>
